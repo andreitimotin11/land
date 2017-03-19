@@ -21,7 +21,7 @@ class IndexController extends Controller
         dump($pages);
         dump($portfolios);
         dump($services);
-        dump($peoples);
+//        dump($peoples);
 
         return view('layouts.site');
     }
