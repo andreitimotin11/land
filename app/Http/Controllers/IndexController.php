@@ -27,7 +27,14 @@ class IndexController extends Controller
             $item = array('title' =>$page->name, 'alias'=>$page->alias);
             array_push($menu, $item);
         }
-        dd($menu);
+        $item = array('title'=>'Services', 'alias'=> 'service');
+        array_push($menu, $item);
+        $item = array('title'=>'Portfolio', 'alias'=> 'Portfolio');
+        array_push($menu, $item);
+        $item = array('title'=>'Team', 'alias'=> 'team');
+        array_push($menu, $item);
+        $item = array('title'=>'Contact', 'alias'=> 'contact');
+        array_push($menu, $item);
         return view('site.index');
     }
 }
