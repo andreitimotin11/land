@@ -86,8 +86,8 @@
       <file leaf-file-name="content.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/site/content.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="15" column="83" lean-forward="true" selection-start-line="15" selection-start-column="83" selection-end-line="15" selection-end-column="83" />
+            <state relative-caret-position="484">
+              <caret line="35" column="108" lean-forward="false" selection-start-line="35" selection-start-column="108" selection-end-line="35" selection-end-column="108" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#2;n#section#3;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#section#3;n#!!top" expanded="true" />
@@ -475,7 +475,7 @@
       <option name="presentableId" value="Default" />
       <updated>1489520033428</updated>
       <workItem from="1489520038469" duration="3809000" />
-      <workItem from="1489910395072" duration="12426000" />
+      <workItem from="1489910395072" duration="13464000" />
     </task>
     <task id="LOCAL-00001" summary="add initial settings">
       <created>1489521235854</created>
@@ -645,11 +645,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489944403463</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="view">
+      <created>1489945162791</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1489945162791</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16235000" />
+    <option name="totallyTimeSpent" value="17273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="503" y="0" width="784" height="991" extended-state="0" />
@@ -890,8 +897,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/site/content.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="15" column="83" lean-forward="true" selection-start-line="15" selection-start-column="83" selection-end-line="15" selection-end-column="83" />
+        <state relative-caret-position="484">
+          <caret line="35" column="108" lean-forward="false" selection-start-line="35" selection-start-column="108" selection-end-line="35" selection-end-column="108" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#2;n#section#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#section#3;n#!!top" expanded="true" />
