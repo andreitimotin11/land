@@ -16,8 +16,17 @@ class IndexController extends Controller
     public function execute(Request $request)
     {
     	if($request->isMethod('post')){
-    		
+		    $messages = [
+		    	'required' => 'Cimp :attribute obligatoriu',
+		    	'email' => 'Cimp :attribute trebuie sa corespunda adresei email',
+		    ];
+    		$this->validate($request, [
+    			'name' => 'required|max:255',
+    			'email' => 'required|email',
+    			'text' => 'required',
+		    ],$messages);
 	    }
+	    dump($request);
     	
         $pages = Page::all();
         $portfolios = Portfolio::get(array('name','filter','images'));
