@@ -22,7 +22,10 @@ class IndexController extends Controller
 //        dump($portfolios);
 //        dump($services);
 //        dump($peoples);
-
-        return view('layouts.site');
+        $menu = array();
+        foreach ($pages as $page) {
+            $item = array('title' =>$page->name, 'alias'=>$page->alias);
+        }
+        return view('site.index');
     }
 }
