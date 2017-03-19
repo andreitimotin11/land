@@ -55,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="602">
-              <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+              <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -476,7 +476,7 @@
       <option name="presentableId" value="Default" />
       <updated>1489520033428</updated>
       <workItem from="1489520038469" duration="3809000" />
-      <workItem from="1489910395072" duration="10063000" />
+      <workItem from="1489910395072" duration="10092000" />
     </task>
     <task id="LOCAL-00001" summary="add initial settings">
       <created>1489521235854</created>
@@ -611,11 +611,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489942680562</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add migrations">
+      <created>1489942795911</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1489942795911</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13872000" />
+    <option name="totallyTimeSpent" value="13901000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="622" y="148" width="654" height="991" extended-state="0" />
@@ -864,7 +871,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="602">
-          <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
