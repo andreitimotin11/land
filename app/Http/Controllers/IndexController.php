@@ -18,12 +18,13 @@ class IndexController extends Controller
         $pages = Page::all();
         $portfolios = Portfolio::get(array('name','filter','images'));
         $services = Service::where('id','<',20)->get();
-        $peoples = People::take(3)->get();.
-	    $tags = DB::table('portfolios')->distinct()->lists('filter');dd($tags);
-//        dump($pages);
-//        dump($portfolios);
-//        dump($services);
-//        dump($peoples);
+        $peoples = People::take(3)->get();
+	    $tags = DB::table('portfolios')->distinct()->lists('filter');
+//	  dd($tags);
+//    dump($pages);
+//    dump($portfolios);
+//    dump($services);
+//    dump($peoples);
         $menu = array();
         foreach ($pages as $page) {
             $item = array('title' =>$page->name, 'alias'=>$page->alias);
@@ -44,6 +45,7 @@ class IndexController extends Controller
             'services' => $services,
             'portfolios' => $portfolios,
             'peoples' => $peoples,
+            'tags' => $tags,
         ));
     }
 }
