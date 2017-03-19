@@ -18,10 +18,10 @@ class IndexController extends Controller
         $portfolios = Portfolio::get(array('name','filter','images'));
         $services = Service::where('id','<',20)->get();
         $peoples = People::take(3)->get();
-        dump($pages);
-        dump($portfolios);
-        dump($services);
-        dump($peoples);
+//        dump($pages);
+//        dump($portfolios);
+//        dump($services);
+//        dump($peoples);
 
         return view('layouts.site');
     }
