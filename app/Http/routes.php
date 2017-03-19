@@ -16,3 +16,14 @@ Route::group(['middleware'=>'web'],function (){
     Route::get('/page/{alias}',['uses'=>'PageController@execute','as'=>'page']);
     Route::auth();
 });
+Route::group(['prefix'=>'admin','middleware'=>'auth'], function (){
+    //admin
+    Route::get('/',function (){
+
+    });
+    // admin/pages
+    Route::group(['prefix'=>'pages'],function (){
+        Route::get('/',['uses'=>'PagesController@execute']);
+    });
+    Route::match(['get','post'],'/add',['uses'=>'PagesAddController@execute', 'as'=>'pagesAdd']);
+});
