@@ -17,7 +17,7 @@ class IndexController extends Controller
         $pages = Page::all();
         $portfolios = Portfolio::get(array('name','filter','images'));
         $services = Service::where('id','<',20)->get();
-        $peoples = People::take(3)->get();
+//        $peoples = People::take(3)->get();
         dump($pages);
         dump($portfolios);
         dump($services);
