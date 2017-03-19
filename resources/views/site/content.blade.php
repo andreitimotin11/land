@@ -1,50 +1,71 @@
 @if(isset($pages) && is_object($pages))
-    <section id="home" class="top_cont_outer">
-        <div class="hero_wrapper">
-            <div class="container">
-                <div class="hero_section">
-                    <div class="row">
-                        <div class="col-lg-5 col-sm-7">
-                            <div class="top_left_cont zoomIn wow animated">
-                                <h2>We create <strong>awesome</strong> web templates</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text  printer took a galley of type and scrambled it to make a type specimen.</p>
-                                <a href="#service" class="read_more2">Read more</a> </div>
-                        </div>
-                        <div class="col-lg-7 col-sm-5">
-                            <img src="{{ asset('assets/img/main_device_image.png') }}" class="zoomIn wow animated" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--Hero_Section-->
+    @foreach($pages as $k => $page)
 
-    <section id="aboutUs">
-        <!--Aboutus-->
-        <div class="inner_wrapper">
-            <div class="container">
-                <h2>About Us</h2>
-                <div class="inner_section">
-                    <div class="row">
-                        <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><img src="{{ asset('assets/img/about-img.jpg') }}" class="img-circle delay-03s animated wow zoomIn" alt=""></div>
-                        <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
-                            <div class=" delay-01s animated fadeInDown wow animated">
-                                <h3>Lorem Ipsum has been the industry's standard dummy text ever..</h3><br/>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.PageMaker including versions of Lorem Ipsum.</p> <br/>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        @if($k%2 == 0)
+            <section id="home" class="top_cont_outer">
+                <div class="hero_wrapper">
+                    <div class="container">
+                        <div class="hero_section">
+                            <div class="row">
+                                <div class="col-lg-5 col-sm-7">
+                                    <div class="top_left_cont zoomIn wow animated">
+                                        {!! $page->text !!}
+                                        <a href="#service" class="read_more2">Read more</a></div>
+                                </div>
+                                <div class="col-lg-7 col-sm-5">
+                                    {!! Html::image('assets/img'.$page->images) !!}
+                                </div>
                             </div>
-                            <div class="work_bottom"> <span>Want to know more..</span> <a href="#contact" class="contact_btn">Contact Us</a> </div>
                         </div>
-
                     </div>
-
-
                 </div>
-            </div>
-        </div>
-    </section>
-    <!--Aboutus-->
+            </section>
+            <!--Hero_Section-->
+        @else
+            <section id="aboutUs">
+                <!--Aboutus-->
+                <div class="inner_wrapper">
+                    <div class="container">
+                        <h2>About Us</h2>
+                        <div class="inner_section">
+                            <div class="row">
+                                <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><img
+                                            src="{{ asset('assets/img/about-img.jpg') }}"
+                                            class="img-circle delay-03s animated wow zoomIn" alt=""></div>
+                                <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
+                                    <div class=" delay-01s animated fadeInDown wow animated">
+                                        <h3>Lorem Ipsum has been the industry's standard dummy text ever..</h3><br/>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry's standard dummy text ever since the
+                                            1500s, when an unknown printer took a galley of type and scrambled it to
+                                            make a type specimen book.PageMaker including versions of Lorem Ipsum.</p>
+                                        <br/>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry's standard dummy text ever since the
+                                            1500s, when an unknown printer took a galley of type and scrambled it to
+                                            make a type specimen book. It has survived not only five centuries, but also
+                                            the leap into electronic typesetting, remaining essentially unchanged like
+                                            Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    </div>
+                                    <div class="work_bottom"><span>Want to know more..</span> <a href="#contact"
+                                                                                                 class="contact_btn">Contact
+                                            Us</a></div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Aboutus-->
+        @endif
+
+    @endforeach
+
+
+
 @endif
 
 
@@ -52,53 +73,65 @@
 
 
 <!--Service-->
-<section  id="service">
+<section id="service">
     <div class="container">
         <h2>Services</h2>
         <div class="service_wrapper">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="service_block">
-                        <div class="service_icon delay-03s animated wow  zoomIn"> <span><i class="fa fa-android"></i></span> </div>
+                        <div class="service_icon delay-03s animated wow  zoomIn"><span><i
+                                        class="fa fa-android"></i></span></div>
                         <h3 class="animated fadeInUp wow">Android</h3>
-                        <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 borderLeft">
                     <div class="service_block">
-                        <div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><i class="fa fa-apple"></i></span> </div>
+                        <div class="service_icon icon2  delay-03s animated wow zoomIn"><span><i class="fa fa-apple"></i></span>
+                        </div>
                         <h3 class="animated fadeInUp wow">Apple IOS</h3>
-                        <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 borderLeft">
                     <div class="service_block">
-                        <div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><i class="fa fa-html5"></i></span> </div>
+                        <div class="service_icon icon3  delay-03s animated wow zoomIn"><span><i class="fa fa-html5"></i></span>
+                        </div>
                         <h3 class="animated fadeInUp wow">Design</h3>
-                        <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
                     </div>
                 </div>
             </div>
             <div class="row borderTop">
                 <div class="col-lg-4 mrgTop">
                     <div class="service_block">
-                        <div class="service_icon delay-03s animated wow  zoomIn"> <span><i class="fa fa-dropbox"></i></span> </div>
+                        <div class="service_icon delay-03s animated wow  zoomIn"><span><i
+                                        class="fa fa-dropbox"></i></span></div>
                         <h3 class="animated fadeInUp wow">Concept</h3>
-                        <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 borderLeft mrgTop">
                     <div class="service_block">
-                        <div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><i class="fa fa-slack"></i></span> </div>
+                        <div class="service_icon icon2  delay-03s animated wow zoomIn"><span><i class="fa fa-slack"></i></span>
+                        </div>
                         <h3 class="animated fadeInUp wow">User Research</h3>
-                        <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 borderLeft mrgTop">
                     <div class="service_block">
-                        <div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><i class="fa fa-users"></i></span> </div>
+                        <div class="service_icon icon3  delay-03s animated wow zoomIn"><span><i class="fa fa-users"></i></span>
+                        </div>
                         <h3 class="animated fadeInUp wow">User Experience</h3>
-                        <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
                     </div>
                 </div>
             </div>
@@ -106,8 +139,6 @@
     </div>
 </section>
 <!--Service-->
-
-
 
 
 <!-- Portfolio -->
@@ -155,11 +186,14 @@
         <!--/Portfolio Filters -->
 
         <!-- Portfolio Wrapper -->
-        <div class="isotope fadeInLeft animated wow" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper">
+        <div class="isotope fadeInLeft animated wow" style="position: relative; overflow: hidden; height: 480px;"
+             id="portfolio_wrapper">
 
             <!-- Portfolio Item -->
-            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   appleIOS isotope-item">
-                <div class="portfolio_img"> <img src="{{ asset('assets/img/portfolio_pic1.jpg') }}"  alt="Portfolio 1"> </div>
+            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;"
+                 class="portfolio-item one-four   appleIOS isotope-item">
+                <div class="portfolio_img"><img src="{{ asset('assets/img/portfolio_pic1.jpg') }}" alt="Portfolio 1">
+                </div>
                 <div class="item_overlay">
                     <div class="item_info">
                         <h4 class="project_name">SMS Mobile App</h4>
@@ -169,8 +203,10 @@
             <!--/Portfolio Item -->
 
             <!-- Portfolio Item-->
-            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design isotope-item">
-                <div class="portfolio_img"> <img src="{{ asset('assets/img/portfolio_pic2.jpg') }}" alt="Portfolio 1"> </div>
+            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;"
+                 class="portfolio-item one-four  design isotope-item">
+                <div class="portfolio_img"><img src="{{ asset('assets/img/portfolio_pic2.jpg') }}" alt="Portfolio 1">
+                </div>
                 <div class="item_overlay">
                     <div class="item_info">
                         <h4 class="project_name">Finance App</h4>
@@ -180,8 +216,10 @@
             <!--/Portfolio Item -->
 
             <!-- Portfolio Item -->
-            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design  isotope-item">
-                <div class="portfolio_img"> <img src="{{ asset('assets/img/portfolio_pic3.jpg') }}" alt="Portfolio 1"> </div>
+            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;"
+                 class="portfolio-item one-four  design  isotope-item">
+                <div class="portfolio_img"><img src="{{ asset('assets/img/portfolio_pic3.jpg') }}" alt="Portfolio 1">
+                </div>
                 <div class="item_overlay">
                     <div class="item_info">
                         <h4 class="project_name">GPS Concept</h4>
@@ -191,8 +229,10 @@
             <!--/Portfolio Item-->
 
             <!-- Portfolio Item-->
-            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  android  prototype web isotope-item">
-                <div class="portfolio_img"> <img src="{{ asset('assets/img/portfolio_pic4.jpg') }}" alt="Portfolio 1"> </div>
+            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;"
+                 class="portfolio-item one-four  android  prototype web isotope-item">
+                <div class="portfolio_img"><img src="{{ asset('assets/img/portfolio_pic4.jpg') }}" alt="Portfolio 1">
+                </div>
                 <div class="item_overlay">
                     <div class="item_info">
                         <h4 class="project_name">Shopping</h4>
@@ -202,8 +242,10 @@
             <!-- Portfolio Item -->
 
             <!-- Portfolio Item -->
-            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design isotope-item">
-                <div class="portfolio_img"> <img src="{{ asset('assets/img/portfolio_pic5.jpg') }}" alt="Portfolio 1"> </div>
+            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;"
+                 class="portfolio-item one-four  design isotope-item">
+                <div class="portfolio_img"><img src="{{ asset('assets/img/portfolio_pic5.jpg') }}" alt="Portfolio 1">
+                </div>
                 <div class="item_overlay">
                     <div class="item_info">
                         <h4 class="project_name">Managment</h4>
@@ -213,8 +255,10 @@
             <!--/Portfolio Item -->
 
             <!-- Portfolio Item -->
-            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  web isotope-item">
-                <div class="portfolio_img"> <img src="{{ asset('assets/img/portfolio_pic6.jpg') }}" alt="Portfolio 1"> </div>
+            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;"
+                 class="portfolio-item one-four  web isotope-item">
+                <div class="portfolio_img"><img src="{{ asset('assets/img/portfolio_pic6.jpg') }}" alt="Portfolio 1">
+                </div>
                 <div class="item_overlay">
                     <div class="item_info">
                         <h4 class="project_name">iPhone</h4>
@@ -224,8 +268,10 @@
             <!--/Portfolio Item -->
 
             <!-- Portfolio Item  -->
-            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design web isotope-item">
-                <div class="portfolio_img"> <img src="{{ asset('assets/img/portfolio_pic7.jpg') }}" alt="Portfolio 1"> </div>
+            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;"
+                 class="portfolio-item one-four  design web isotope-item">
+                <div class="portfolio_img"><img src="{{ asset('assets/img/portfolio_pic7.jpg') }}" alt="Portfolio 1">
+                </div>
                 <div class="item_overlay">
                     <div class="item_info">
                         <h4 class="project_name">Nexus Phone</h4>
@@ -235,8 +281,10 @@
             <!--/Portfolio Item -->
 
             <!-- Portfolio Item -->
-            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   android isotope-item">
-                <div class="portfolio_img"> <img src="{{ asset('assets/img/portfolio_pic8.jpg') }}" alt="Portfolio 1"> </div>
+            <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;"
+                 class="portfolio-item one-four   android isotope-item">
+                <div class="portfolio_img"><img src="{{ asset('assets/img/portfolio_pic8.jpg') }}" alt="Portfolio 1">
+                </div>
                 <div class="item_overlay">
                     <div class="item_info">
                         <h4 class="project_name">Android</h4>
@@ -297,7 +345,8 @@
                 </div>
                 <h3 class="wow fadeInDown delay-03s">Tom Rensed</h3>
                 <span class="wow fadeInDown delay-03s">Chief Executive Officer</span>
-                <p class="wow fadeInDown delay-03s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
+                <p class="wow fadeInDown delay-03s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                    consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
             </div>
             <div class="team_area">
                 <div class="team_box  wow fadeInDown delay-06s">
@@ -312,7 +361,8 @@
                 </div>
                 <h3 class="wow fadeInDown delay-06s">Kathren Mory</h3>
                 <span class="wow fadeInDown delay-06s">Vice President</span>
-                <p class="wow fadeInDown delay-06s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
+                <p class="wow fadeInDown delay-06s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                    consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
             </div>
             <div class="team_area">
                 <div class="team_box wow fadeInDown delay-09s">
@@ -327,7 +377,8 @@
                 </div>
                 <h3 class="wow fadeInDown delay-09s">Lancer Jack</h3>
                 <span class="wow fadeInDown delay-09s">Senior Manager</span>
-                <p class="wow fadeInDown delay-09s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
+                <p class="wow fadeInDown delay-09s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                    consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
             </div>
         </div>
     </div>
@@ -369,19 +420,28 @@
                     </div>
 
 
-
                     <ul class="social_links">
-                        <li class="twitter animated bounceIn wow delay-02s"><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
-                        <li class="facebook animated bounceIn wow delay-03s"><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
-                        <li class="pinterest animated bounceIn wow delay-04s"><a href="javascript:void(0)"><i class="fa fa-pinterest"></i></a></li>
-                        <li class="gplus animated bounceIn wow delay-05s"><a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="twitter animated bounceIn wow delay-02s"><a href="javascript:void(0)"><i
+                                        class="fa fa-twitter"></i></a></li>
+                        <li class="facebook animated bounceIn wow delay-03s"><a href="javascript:void(0)"><i
+                                        class="fa fa-facebook"></i></a></li>
+                        <li class="pinterest animated bounceIn wow delay-04s"><a href="javascript:void(0)"><i
+                                        class="fa fa-pinterest"></i></a></li>
+                        <li class="gplus animated bounceIn wow delay-05s"><a href="javascript:void(0)"><i
+                                        class="fa fa-google-plus"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-lg-8 wow fadeInLeft delay-06s">
                     <div class="form">
-                        <input class="input-text" type="text" name="" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-                        <input class="input-text" type="text" name="" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-                        <textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
+                        <input class="input-text" type="text" name="" value="Your Name *"
+                               onFocus="if(this.value==this.defaultValue)this.value='';"
+                               onBlur="if(this.value=='')this.value=this.defaultValue;">
+                        <input class="input-text" type="text" name="" value="Your E-mail *"
+                               onFocus="if(this.value==this.defaultValue)this.value='';"
+                               onBlur="if(this.value=='')this.value=this.defaultValue;">
+                        <textarea class="input-text text-area" cols="0" rows="0"
+                                  onFocus="if(this.value==this.defaultValue)this.value='';"
+                                  onBlur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
                         <input class="input-btn" type="submit" value="send message">
                     </div>
                 </div>
@@ -389,6 +449,7 @@
         </section>
     </div>
     <div class="container">
-        <div class="footer_bottom"><span>Copyright © 2014,    Template by <a href="http://webthemez.com">WebThemez.com</a>. </span> </div>
+        <div class="footer_bottom"><span>Copyright © 2014,    Template by <a
+                        href="http://webthemez.com">WebThemez.com</a>. </span></div>
     </div>
 </footer>
